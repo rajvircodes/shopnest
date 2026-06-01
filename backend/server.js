@@ -2,8 +2,14 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import morgan from "morgan";
+import connectDB from "./config/db.js";
+import User from "./models/user.model.js";
+import Product from "./models/product.model.js";
+import Order from "./models/order.model.js";
+
 
 dotenv.config();
+connectDB()
 
 const app = express();
 
@@ -34,7 +40,8 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
+
 
 app.listen(PORT, () => {
   console.log(`Server is running in ${process.env.NODE_ENV} mode on ${PORT}`);

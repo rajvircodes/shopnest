@@ -3,10 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
-import User from "./models/user.model.js";
-import Product from "./models/product.model.js";
-import Order from "./models/order.model.js";
-
+import authRouter from './routes/auth.routes.js'
 
 dotenv.config();
 connectDB()
@@ -16,6 +13,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
+
+
+app.use('/api/auth',authRouter)
 
 app.get("/api/health", (req, res) => {
   res.status(200).json({

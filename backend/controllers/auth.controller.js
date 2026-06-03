@@ -116,7 +116,6 @@ const login = async (req, res) => {
  * @route { POST /api/auth/me }
  * @access { private }
  */
-
 const getMe = async (req, res) => {
   try {
     const user = await User.findById(req.user.userId).select("-password");

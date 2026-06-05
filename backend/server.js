@@ -33,8 +33,8 @@ app.get("/api/health", (req, res) => {
 app.use((req, res) => {
   res.status(404).json({
     message: `Route ${req.originalUrl} Not found!`,
+    success: false,
   });
-  success: (false, status);
 });
 
 app.use((err, req, res, next) => {

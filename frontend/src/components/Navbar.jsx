@@ -44,7 +44,8 @@ const Navbar = () => {
               <Link to="/orders" style={styles.link}>
                 My Orders
               </Link>
-              <span style={styles.userName}>Hi, {user.name.split(' ')[0]}</span>
+              {/* FIXED LINE HERE: Added optional chaining and safe fallback */}
+              <span style={styles.userName}>Hi, {user?.name?.split(' ')[0] || 'User'}</span>
               <button onClick={handleLogout} style={styles.logoutBtn}>
                 Logout
               </button>

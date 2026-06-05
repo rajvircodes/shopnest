@@ -7,7 +7,6 @@ import Product from "../models/product.model.js";
 const createProduct = async (req, res) => {
   try {
     const { name, description, price, image, category, stock } = req.body;
-    console.log(req.body);
 
     if (!name || !description || !price || !image || !category || !stock) {
       return res.status(400).json({
@@ -27,7 +26,7 @@ const createProduct = async (req, res) => {
     res.status(201).json({
       success: true,
       message: "Product created successfully!",
-      product,
+      product:product
     });
   } catch (error) {
     res.status(500).json({
@@ -48,7 +47,7 @@ const getAllProducts = async (req, res) => {
     res.status(200).json({
       success: true,
       message: "Product fetched successfully!",
-      product: product,
+      products: product,
     });
   } catch (error) {
     res.status(500).json({

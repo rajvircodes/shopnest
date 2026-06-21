@@ -6,16 +6,16 @@
 }
 
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
+  --primary: #991b1b;
+  --primary-dark: #7f1d1d;
   --danger: #dc2626;
   --success: #16a34a;
-  --text: #111827;
-  --text-light: #6b7280;
-  --border: #e5e7eb;
-  --bg: #f9fafb;
+  --text: #1c0a0a;
+  --text-light: #78716c;
+  --border: #f0d9d9;
+  --bg: #fdf6f6;
   --white: #ffffff;
-  --shadow: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow: 0 1px 3px rgba(80,0,0,0.1);
   --radius: 8px;
 }
 
